@@ -1,0 +1,26 @@
+1. Exception handling adalah cara menangani masalah atau error di aplikasi supaya sistem tetap berjalan dengan baik. Menurut saya Exception handling ini sangat penting karena beberapa alasan.
+-Untuk menghindari aplikasi crash secara langsung: Kalau ada error, aplikasi tidak langsung berhenti, tetapi tetap bisa digunakan.
+-Lebih mudah untuk mengetahui masalahnya: Error yang muncul bisa dijelaskan dengan jelas, jadi pengguna lebih mudah tahu apa yang salah.
+-UX (Pengalaman pengguna) yang baik: Kalau ada error, pengguna tidak melihat pesan aneh atau teknis, tapi pesan yang mudah dimengerti.
+-Pengelolaan resource (semacam database) lebih aman: Misalnya, aplikasi tetap bisa menutup file atau menghentikan koneksi internet, meskipun ada error.
+
+2.Di kode tugas Siang [Baratie Restaurant], ada blok try, catch, dan finally. Berikut penjelasan cara kerjanya:
+-Blok try: Di sini kode utama dijalankan. Kalau ada error, sistem langsung loncat ke blok catch. 
+Contoh.
+*if (bayar < hargaTotal) {
+    throw new Error("Uang kurang dari harga total");
+}*
+Artinya kalau kondisi ini terjadi, error akan dilempar (throw) dan ditangani di catch.
+
+-Blok catch: Di sini error ditangkap dan diberi respons, misalnya menampilkan pesan error ke pengguna:
+*Error: Uang kurang dari harga total*
+
+-Blok finally dijalankan setiap kali, walaupun ada errornya atau tidak. Fungsinyauntuk memastikan hal-hal penting tetap dilakukan, misalnya menutup file atau menampilkan log. 
+Contoh.
+*finally {
+    console.log("Cleaning up resources...");
+}*
+Pesan seperti ini pasti akan muncul, walaupun ada error atau tidak.
+
+3. PEMOGRAMAN BERBASIS OBYEK dalam 2 kata!
+"GACORRRRRR BANGGGGGGG"
